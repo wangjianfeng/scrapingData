@@ -16,11 +16,12 @@ def getInfoByFilterCSS(url):
         bsobj = BeautifulSoup(html)
         nameList = bsobj.findAll("span",{"class":"green"})
         for name in nameList:
+            #get_text()清除HTML文档中的所有标签
             print(name.get_text())
     except AttributeError as e:
         return None
 
-    return title
+    #return title
 
 getInfoByFilterCSS("http://www.pythonscraping.com/pages/warandpeace.html")
 

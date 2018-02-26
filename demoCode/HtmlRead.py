@@ -17,7 +17,7 @@ def getTitle(url):
 
     return title
 
-title = getTitle("http://data.stats.gov.cn/tablequery.htm?m=QueryData&code=AD0D&wds=%5B%7B%22wdcode%22%3A%22reg%22%2C%22valuecode%22%3A%22000000%22%7D%5D")
+title = getTitle("http://data.stats.gov.cn/easyquery.htm?m=getOtherWds&dbcode=hgnd&rowcode=zb&colcode=sj&wds=%5B%5D&k1=1519630280957")
 if title == None:
     print("Title could not be found")
 else:

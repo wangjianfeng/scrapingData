@@ -2,6 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from urllib.error import HTTPError
 
+
 def getTitle(url):
     try:
         html = urlopen(url)
@@ -17,7 +18,7 @@ def getTitle(url):
 
     return title
 
-title = getTitle("http://data.stats.gov.cn/easyquery.htm?m=getOtherWds&dbcode=hgnd&rowcode=zb&colcode=sj&wds=%5B%5D&k1=1519630280957")
+title = getTitle("http://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode=hgnd&rowcode=zb&colcode=sj&wds=%5B%5D&dfwds=%5B%7B%22wdcode%22%3A%22zb%22%2C%22valuecode%22%3A%22A030701%22%7D%5D&k1=1519624234568")
 if title == None:
     print("Title could not be found")
 else:
